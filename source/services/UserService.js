@@ -21,4 +21,8 @@ export default class UserService {
         return UserService.login(username, password);
       });
   }
+
+  static openWebSocket(token) {
+    return new WebSocket('ws://' + Config.SERVER_HOST + '?' + token);
+  }
 }

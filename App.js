@@ -1,17 +1,29 @@
 import React from 'react';
-import {
-  AppRegistry,
-  Text,
-} from 'react-native';
-import { StackNavigator } from 'react-navigation';
-import LoginScreen from './screens/LoginScreen';
-import RegisterScreen from './screens/RegisterScreen';
-import MapScreen from './screens/MapScreen';
+import { AppRegistry } from 'react-native';
+import { Provider } from 'react-redux';
+import {applyMiddleware, createStore} from 'redux';
+import thunkMiddleware from 'redux-thunk'
 
-const IndigoClient = StackNavigator({
-  Login: { screen: LoginScreen },
-  Register: { screen: RegisterScreen },
-  Map: { screen: MapScreen },
-});
+import AppReducer from './source/reducers/AppReducer';
+import AppWithNavigationState from './source/navigators/AppNavigator';
+
+class IndigoClient extends React.Component {
+  store = createStore(
+    AppReducer,
+    applyMiddleware(
+      thunkMiddleware,
+    )
+  );
+
+  render() {
+    return (
+      <Provider store={this.store}>
+        <AppWithNavigationState />
+      </Provider>
+    );
+  }
+}
 
 AppRegistry.registerComponent('IndigoClient', () => IndigoClient);
+
+export default IndigoClient;
