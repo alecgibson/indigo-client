@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
-import { StyleSheet, TextInput, View, Button } from 'react-native';
+import { StyleSheet, TextInput, View, Button, Alert } from 'react-native';
+import UserService from "../services/UserService";
 
-export default class LoginScreen extends Component {
+export default class RegisterScreen extends Component {
   static navigationOptions = {
     header: null,
   };
@@ -9,6 +10,7 @@ export default class LoginScreen extends Component {
   constructor(props) {
     super(props);
     this.state = {
+      email: '',
       username: '',
       password: '',
     };
@@ -20,7 +22,12 @@ export default class LoginScreen extends Component {
       <View style={styles.container}>
         <TextInput
           style={styles.textInput}
-          placeholder="Username or email"
+          placeholder="Email"
+          onChangeText={(email) => this.setState({email})}
+        />
+        <TextInput
+          style={styles.textInput}
+          placeholder="Username"
           onChangeText={(username) => this.setState({username})}
         />
         <TextInput
@@ -31,20 +38,18 @@ export default class LoginScreen extends Component {
         />
         <Button
           style={styles.button}
-          title="Login"
-          onPress={() => {this.login();}}
-        />
-        <Button
-          style={styles.button}
           title="Register"
-          onPress={() => navigate('Register')}
+          onPress={() => {this.registerAndAuthenticate();}}
         />
       </View>
     );
   }
 
-  login() {
-
+  registerAndAuthenticate() {
+    UserService.register(this.state.email, this.state.username, this.state.password)
+      .then(() => {
+        return UserService.login(this.state.username, this.state.password);
+      });
   }
 }
 
@@ -60,6 +65,6 @@ const styles = StyleSheet.create({
     flex: 0,
   },
   button: {
-    marginTop: 30,
+    marginTop: 10,
   }
 });
