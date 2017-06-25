@@ -1,5 +1,6 @@
 import UserService from "../services/UserService";
 import {navigate} from "./Navigate";
+import {location} from "./Location";
 
 export const WEB_SOCKET_CONNECTION = 'WEB_SOCKET_CONNECTION';
 export const WEB_SOCKET_MESSAGE = 'WEB_SOCKET_MESSAGE';
@@ -14,6 +15,7 @@ export function openWebSocket(token) {
 
     webSocket.onopen = () => {
       dispatch(webSocketConnection(OPEN, webSocket));
+      dispatch(location());
       dispatch(navigate('Map'));
     };
 

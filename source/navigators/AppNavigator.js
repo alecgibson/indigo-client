@@ -3,9 +3,9 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { addNavigationHelpers, StackNavigator } from 'react-navigation';
 
-import LoginScreen from '../components/LoginScreen';
-import RegisterScreen from "../components/RegisterScreen";
-import MapScreen from "../components/MapScreen";
+import LoginScreen from './LoginScreen';
+import RegisterScreen from "./RegisterScreen";
+import MapScreen from "./MapScreen";
 
 export const AppNavigator = StackNavigator({
   Login: { screen: LoginScreen },

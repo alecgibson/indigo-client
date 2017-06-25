@@ -1,26 +1,33 @@
 import { NavigationActions } from 'react-navigation';
+import {AppNavigator} from "../navigators/AppNavigator";
 
-import {AppNavigator} from "../screens-old/Navigator";
+import * as Navigate from "../actions/Navigate";
 
-// Start the app with the map at the bottom of the stack, and a login page on top
-const baseAction = AppNavigator.router.getActionForPathAndParams('Map');
-const temporaryNavigationState = AppNavigator.router.getStateForAction(baseAction);
-const loginAction = AppNavigator.router.getActionForPathAndParams('Login');
-const initialNavigationState = AppNavigator.router.getStateForAction(loginAction, temporaryNavigationState);
+// Start with two routes: The Main screen, with the Login screen on top.
+const firstAction = AppNavigator.router.getActionForPathAndParams('Map');
+const tempNavState = AppNavigator.router.getStateForAction(firstAction);
+const secondAction = AppNavigator.router.getActionForPathAndParams('Login');
+const initialNavState = AppNavigator.router.getStateForAction(
+  secondAction,
+  tempNavState
+);
 
-export default function nav(state = initialNavigationState, action) {
+export default function nav(state = initialNavState, action) {
+  if (action.type !== Navigate.TYPE) {
+    return state;
+  }
+
   let nextState;
-
-  switch(action.type) {
-    case 'Login':
+  switch (action.navigation.target) {
+    case 'Register':
       nextState = AppNavigator.router.getStateForAction(
-        NavigationActions.back(),
+        NavigationActions.navigate({ routeName: 'Register' }),
         state
       );
       break;
-    case 'Logout':
+    case 'Map':
       nextState = AppNavigator.router.getStateForAction(
-        NavigationActions.navigate({ routeName: 'Login' }),
+        NavigationActions.navigate({ routeName: 'Map' }),
         state
       );
       break;
@@ -29,5 +36,6 @@ export default function nav(state = initialNavigationState, action) {
       break;
   }
 
+  // Simply return the original `state` if `nextState` is null or undefined.
   return nextState || state;
 }
