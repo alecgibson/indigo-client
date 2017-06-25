@@ -1,5 +1,5 @@
 import UserService from "../services/UserService";
-import {openWebSocket} from "./WebSocket";
+import {connect} from "./WebSocket";
 
 // TODO: Dispatch async status for UI
 
@@ -16,7 +16,7 @@ export function login(emailOrUsername, password) {
   return function(dispatch) {
     return UserService.login(emailOrUsername, password)
       .then((response) => {
-        dispatch(openWebSocket(response.json.token));
+        dispatch(connect(response.json.token));
       });
   }
 }

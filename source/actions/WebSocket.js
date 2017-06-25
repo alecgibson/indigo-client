@@ -1,49 +1,36 @@
-import UserService from "../services/UserService";
-import {navigate} from "./Navigate";
-import {location} from "./Location";
+export const TYPE = 'WEB_SOCKET';
+export const RECEIVE = 'RECEIVE';
+export const SEND = 'SEND';
+export const CONNECT = 'CONNECT';
+export const DISCONNECT = 'DISCONNECT';
 
-export const WEB_SOCKET_CONNECTION = 'WEB_SOCKET_CONNECTION';
-export const WEB_SOCKET_MESSAGE = 'WEB_SOCKET_MESSAGE';
-export const OPEN = 'OPEN';
-export const CLOSED = 'CLOSED';
-
-// TODO: Store saved token for bypassing login in future
-
-export function openWebSocket(token) {
-  return function(dispatch) {
-    let webSocket = UserService.openWebSocket(token);
-
-    webSocket.onopen = () => {
-      dispatch(webSocketConnection(OPEN, webSocket));
-      dispatch(location());
-      dispatch(navigate('Map'));
-    };
-
-    webSocket.onmessage = (message) => {
-      dispatch(webSocketMessage(message));
-    };
-
-    webSocket.onclose = (message) => {
-      dispatch(webSocketConnection(CLOSED, webSocket));
-    };
-
-    // TODO: Handle errors
+export function connect(token) {
+  return {
+    type: TYPE,
+    method: CONNECT,
+    token: token,
   };
 }
 
-export function webSocketConnection(status, webSocket) {
+export function disconnect() {
   return {
-    type: WEB_SOCKET_CONNECTION,
-    webSocket: {
-      status: status,
-      webSocket: webSocket,
-    },
+    type: TYPE,
+    method: DISCONNECT,
   };
 }
 
-export function webSocketMessage(message) {
+export function sendMessage(message) {
   return {
-    type: WEB_SOCKET_MESSAGE,
-    message: message,
+    type: TYPE,
+    method: SEND,
+    message: JSON.stringify(message),
+  }
+}
+
+export function messageReceived(message) {
+  return {
+    type: TYPE,
+    method: RECEIVE,
+    message: JSON.parse(message),
   };
 }

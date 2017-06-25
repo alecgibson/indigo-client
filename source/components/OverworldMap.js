@@ -3,8 +3,17 @@ import MapView from 'react-native-maps';
 import {StyleSheet} from 'react-native';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
+import {updateWildEncounters} from "../actions/WildEncounters";
 
 class OverworldMap extends Component {
+  componentDidMount() {
+    this.updateWildEncounters();
+  }
+
+  componentWillUnmount() {
+    clearTimeout(this.wildEncounterPoll);
+  }
+
   componentDidUpdate(previousProps) {
     this.map.animateToRegion({
       latitude: this.props.location.coords.latitude,
@@ -28,6 +37,16 @@ class OverworldMap extends Component {
       />
     );
   }
+
+  updateWildEncounters() {
+    if (this.props.location) {
+      this.props.wildEncounters(this.props.location.coords);
+    }
+
+    this.wildEncounterPoll = setTimeout(() => {
+      this.updateWildEncounters();
+    }, 10000);
+  }
 }
 
 const styles = StyleSheet.create({
@@ -46,4 +65,12 @@ function mapStateToProps(state) {
   };
 }
 
-export default connect(mapStateToProps)(OverworldMap);
+function mapDispatchToProps(dispatch) {
+  return {
+    wildEncounters: (location) => {
+      dispatch(updateWildEncounters(location));
+    },
+  };
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(OverworldMap);
