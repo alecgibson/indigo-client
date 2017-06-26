@@ -3,7 +3,7 @@ import Config from "../services/Config";
 import {location} from "../actions/Location";
 import {navigate} from "../actions/Navigate";
 import {SEND, CONNECT, DISCONNECT, TYPE, messageReceived} from "../actions/WebSocket";
-import {TOKEN_STORAGE_KEY, invalidatedSession} from "../actions/Authentication";
+import {TOKEN_STORAGE_KEY, invalidatedSession, authenticated} from "../actions/Authentication";
 
 const WebSocketMiddleware = (function () {
   let socket = null;
@@ -34,6 +34,7 @@ const WebSocketMiddleware = (function () {
             break;
           case 'SESSION_VALIDATED':
             AsyncStorage.setItem(TOKEN_STORAGE_KEY, message.token);
+            store.dispatch(authenticated());
             store.dispatch(location());
             store.dispatch(navigate('Map'));
             break;

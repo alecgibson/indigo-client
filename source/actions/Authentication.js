@@ -4,17 +4,21 @@ import {connect} from "./WebSocket";
 import {navigate} from "./Navigate";
 
 export const TYPE = 'AUTHENTICATION';
+
 export const UNAUTHENTICATED = 'UNAUTHENTICATED';
 export const AUTHENTICATING = 'AUTHENTICATING';
+export const AUTHENTICATED = 'AUTHENTICATED';
+
 export const INVALID_USERNAME_PASSWORD = 'INVALID_USERNAME_PASSWORD';
 export const INVALIDATED_SESSION = 'INVALIDATED_SESSION';
 export const UNKNOWN_ERROR = 'UNKNOWN_ERROR';
+
 export const TOKEN_STORAGE_KEY = '@Indigo:userSessionToken';
 
 export function restoreAuthenticationSession() {
   return function(dispatch) {
     return AsyncStorage.getItem(TOKEN_STORAGE_KEY)
-      .then((error, token) => {
+      .then((token) => {
         dispatch(connect(token));
       });
   }
@@ -87,6 +91,15 @@ export function unknownError() {
     authentication: {
       status: UNAUTHENTICATED,
       message: UNKNOWN_ERROR,
+    }
+  }
+}
+
+export function authenticated() {
+  return {
+    type: TYPE,
+    authentication: {
+      status: AUTHENTICATED,
     }
   }
 }

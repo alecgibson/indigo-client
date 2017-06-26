@@ -1,7 +1,10 @@
 import React, {Component} from 'react';
 import {Animated, Easing} from "react-native";
+import PropTypes from "prop-types";
 
 export default class PokeballSpinner extends Component {
+  defaultSize = 50;
+
   state = {
     spinValue: new Animated.Value(0),
   };
@@ -31,8 +34,8 @@ export default class PokeballSpinner extends Component {
     return (
       <Animated.Image
         style={{
-          width: 50,
-          height: 50,
+          width: this.props.size || this.defaultSize,
+          height: this.props.size || this.defaultSize,
           transform: [{rotate: spin}],
         }}
         source = {require('../../assets/images/pokeballFlatSmall.png')}
@@ -40,3 +43,7 @@ export default class PokeballSpinner extends Component {
     )
   }
 }
+
+PokeballSpinner.props = {
+  size: PropTypes.number,
+};

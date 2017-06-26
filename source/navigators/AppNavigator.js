@@ -6,12 +6,10 @@ import { addNavigationHelpers, StackNavigator } from 'react-navigation';
 import LoginScreen from './LoginScreen';
 import RegisterScreen from "./RegisterScreen";
 import MapScreen from "./MapScreen";
-import LoadingScreen from "./LoadingScreen";
 import SplashScreen from "./SplashScreen";
 
 export const AppNavigator = StackNavigator({
   Splash: { screen: SplashScreen },
-  Loading: { screen: LoadingScreen },
   Login: { screen: LoginScreen },
   Register: { screen: RegisterScreen },
   Map: { screen: MapScreen },
