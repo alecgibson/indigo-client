@@ -1,7 +1,9 @@
+import {AsyncStorage} from "react-native";
 import Config from "../services/Config";
 import {location} from "../actions/Location";
 import {navigate} from "../actions/Navigate";
 import {SEND, CONNECT, DISCONNECT, TYPE, messageReceived} from "../actions/WebSocket";
+import {TOKEN_STORAGE_KEY, invalidatedSession} from "../actions/Authentication";
 
 const WebSocketMiddleware = (function () {
   let socket = null;
@@ -11,10 +13,7 @@ const WebSocketMiddleware = (function () {
   // TODO: Store saved token for bypassing login in future
   function onOpen(store) {
     return () => {
-      store.dispatch(location());
-      store.dispatch(navigate('Map'));
       // TODO: Update state with connection status
-      // TODO: Handle invalid tokens
     };
   }
 
@@ -26,7 +25,24 @@ const WebSocketMiddleware = (function () {
 
   function onMessage(store) {
     return (event) => {
-      store.dispatch(messageReceived(event.data));
+      let message = JSON.parse(event.data);
+      if (message.type === 'authentication') {
+        switch (message.message) {
+          case 'SESSION_INVALIDATED':
+            store.dispatch(invalidatedSession());
+            store.dispatch(navigate('Login'));
+            break;
+          case 'SESSION_VALIDATED':
+            AsyncStorage.setItem(TOKEN_STORAGE_KEY, message.token);
+            store.dispatch(location());
+            store.dispatch(navigate('Map'));
+            break;
+          default:
+            console.warn('Unknown authentication message: ' + message.message);
+        }
+      } else {
+        store.dispatch(messageReceived(message));
+      }
     }
   }
 
@@ -38,7 +54,8 @@ const WebSocketMiddleware = (function () {
     switch (action.method) {
       case CONNECT:
         close(socket);
-        socket = new WebSocket('ws://' + Config.SERVER_HOST + '?' + action.token);
+        let token = action.token || '';
+        socket = new WebSocket('ws://' + Config.SERVER_HOST + '?' + token);
         socket.onmessage = onMessage(store);
         socket.onclose = onClose(store);
         socket.onopen = onOpen(store);
@@ -47,7 +64,7 @@ const WebSocketMiddleware = (function () {
         close(socket);
         break;
       case SEND:
-        socket.send(action.message);
+        socket.send(JSON.stringify(action.message));
         break;
       default:
         return next(action);

@@ -23,7 +23,7 @@ export function sendMessage(message) {
   return {
     type: TYPE,
     method: SEND,
-    message: JSON.stringify(message),
+    message: message,
   }
 }
 
@@ -31,6 +31,6 @@ export function messageReceived(message) {
   return {
     type: TYPE,
     method: RECEIVE,
-    message: JSON.parse(message),
+    message: message,
   };
 }

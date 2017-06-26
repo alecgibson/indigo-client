@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyleSheet, TextInput, View, Button } from 'react-native';
+import {StyleSheet, TextInput, View, Button} from 'react-native';
 import PropTypes from "prop-types";
 
 import {register} from "../actions/Authentication";
@@ -15,12 +15,14 @@ const styles = StyleSheet.create({
   textInput: {
     flex: 0,
   },
+  buttonWrapper: {
+    marginTop: 10,
+  },
   button: {
-    marginTop: 30,
-  }
+  },
 });
 
-const RegisterScreen = ({ navigation }) => (
+const RegisterScreen = ({navigation}) => (
   <View style={styles.container}>
     <TextInput
       style={styles.textInput}
@@ -38,11 +40,13 @@ const RegisterScreen = ({ navigation }) => (
       secureTextEntry={true}
       onChangeText={(password) => this.password = password}
     />
-    <Button
-      style={styles.button}
-      title="Register"
-      onPress={() => navigation.dispatch(register(this.email, this.username, this.password))}
-    />
+    <View style={styles.buttonWrapper}>
+      <Button
+        style={styles.button}
+        title="Register"
+        onPress={() => navigation.dispatch(register(this.email, this.username, this.password))}
+      />
+    </View>
   </View>
 );
 
