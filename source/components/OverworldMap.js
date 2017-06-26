@@ -2,8 +2,9 @@ import React, {Component} from 'react';
 import MapView from 'react-native-maps';
 import {StyleSheet} from 'react-native';
 import PropTypes from 'prop-types';
-import { connect } from 'react-redux';
+import {connect} from 'react-redux';
 import {updateWildEncounters} from "../actions/WildEncounters";
+import TrainerBoy from "./sprites/trainerBoy";
 
 class OverworldMap extends Component {
   componentDidMount() {
@@ -26,7 +27,9 @@ class OverworldMap extends Component {
   render() {
     return (
       <MapView
-        ref={ref => { this.map = ref; }}
+        ref={ref => {
+          this.map = ref;
+        }}
         style={styles.map}
         initialRegion={{
           latitude: 0,
@@ -34,7 +37,12 @@ class OverworldMap extends Component {
           latitudeDelta: 100,
           longitudeDelta: 100,
         }}
-      />
+      >
+        {this.props.location && <MapView.Marker
+          coordinate={this.props.location.coords}>
+          <TrainerBoy/>
+        </MapView.Marker>}
+      </MapView>
     );
   }
 
