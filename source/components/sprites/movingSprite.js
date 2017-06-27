@@ -15,14 +15,20 @@ export default class MovingSprite extends Component {
     this.state = {
       left: true,
     };
+  }
 
-    setInterval(() => {
+  componentDidMount() {
+    this.moveInterval = setInterval(() => {
       this.setState(previousState => {
         return {
           left: !previousState.left,
         };
       });
     }, 500);
+  }
+
+  componentWillUnmount() {
+    clearInterval(this.moveInterval);
   }
 
   render() {
