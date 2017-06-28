@@ -1,10 +1,14 @@
 [
     {
-        "merged": "C:\\Users\\AKG\\OneDrive\\Coding\\Pokemon\\indigo-client\\android\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi\\ic_launcher.png",
-        "source": "C:\\Users\\AKG\\OneDrive\\Coding\\Pokemon\\indigo-client\\android\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher.png"
+        "merged": "/Users/akg/alec/indigo-client/android/C:\\Users\\akg\\alec\\indigo-client\\android\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi\\ic_launcher.png",
+        "source": "/Users/akg/alec/indigo-client/android/C:\\Users\\akg\\alec\\indigo-client\\android\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher.png"
     },
     {
-        "merged": "C:\\Users\\akg\\alec\\indigo-client\\android\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi\\ic_launcher.png",
-        "source": "C:\\Users\\akg\\alec\\indigo-client\\android\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher.png"
+        "merged": "/Users/akg/alec/indigo-client/android/app/build/intermediates/res/merged/debug/mipmap-xxhdpi/ic_launcher.png",
+        "source": "/Users/akg/alec/indigo-client/android/app/src/main/res/mipmap-xxhdpi/ic_launcher.png"
+    },
+    {
+        "merged": "/Users/akg/alec/indigo-client/android/C:\\Users\\AKG\\OneDrive\\Coding\\Pokemon\\indigo-client\\android\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi\\ic_launcher.png",
+        "source": "/Users/akg/alec/indigo-client/android/C:\\Users\\AKG\\OneDrive\\Coding\\Pokemon\\indigo-client\\android\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher.png"
     }
 ]

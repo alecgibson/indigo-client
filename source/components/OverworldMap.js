@@ -6,6 +6,7 @@ import {connect} from 'react-redux';
 import {updateWildEncounters} from "../actions/WildEncounters";
 import MovingSprite from "./sprites/movingSprite";
 import Sprites from "./sprites/sprites";
+import Random from "../services/Random";
 
 class OverworldMap extends Component {
   componentDidMount() {
@@ -53,15 +54,19 @@ class OverworldMap extends Component {
             if (species === '003' || species === '025') {
               species = species + 'm';
             }
-            <MapView.Marker
-              coordinate={encounter.location}
-            >
-              <MovingSprite
-                sprite={Sprites.sprites.pokemon.overworld[species]}
-                bearing={180}
-                walkOnTheSpot={true}
-              />
-            </MapView.Marker>
+
+            return (
+              <MapView.Marker
+                coordinate={encounter.location}
+                key={encounter.id}
+              >
+                <MovingSprite
+                  sprite={Sprites.sprites.pokemon.overworld[species]}
+                  bearing={Random.integerExclusive(0, 360)}
+                  walkOnTheSpot={true}
+                />
+              </MapView.Marker>
+            );
           })
         }
       </MapView>
