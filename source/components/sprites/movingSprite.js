@@ -49,7 +49,10 @@ export default class MovingSprite extends Component {
 
   sprite() {
     // TODO: Add running sprites
-    return this.walkingSprite();
+    if (this.props.walkOnTheSpot) {
+      return this.walkingSprite();
+    }
+
     if (this.props.speed > 1) {
       return this.walkingSprite();
     } else {
@@ -91,4 +94,5 @@ MovingSprite.props = {
   sprite: PropTypes.object.isRequired,
   bearing: PropTypes.number.isRequired,
   speed: PropTypes.number.isRequired,
+  walkOnTheSpot: PropTypes.bool,
 };
