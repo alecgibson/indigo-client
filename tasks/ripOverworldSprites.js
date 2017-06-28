@@ -52,8 +52,8 @@ function process(error, sprites) {
           pokemonNumber = ('000' + pokemonNumber).slice(-3);
           console.log("Pokemon " + pokemonNumber);
 
-          addTransparency(sprite);
           sprite.crop(x, y, 32, 32);
+          addTransparency(sprite);
 
           let folder = `assets/images/sprites/pokemon/overworld/${pokemonNumber}${gender}`;
           sprite.write(`${folder}/${direction}${i}.png`);
