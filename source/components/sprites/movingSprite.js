@@ -93,6 +93,6 @@ export default class MovingSprite extends Component {
 MovingSprite.props = {
   sprite: PropTypes.object.isRequired,
   bearing: PropTypes.number.isRequired,
-  speed: PropTypes.number.isRequired,
+  speed: PropTypes.number,
   walkOnTheSpot: PropTypes.bool,
 };
