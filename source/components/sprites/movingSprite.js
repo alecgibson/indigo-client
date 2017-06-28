@@ -3,17 +3,23 @@ import {Image} from "react-native";
 import PropTypes from "prop-types";
 
 const Direction = {
-  NORTH: 0,
-  EAST: 1,
-  SOUTH: 2,
-  WEST: 3,
+  NORTH: 'n',
+  EAST: 'e',
+  SOUTH: 's',
+  WEST: 'w',
+};
+
+const Animation = {
+  STANDING: '2',
+  HEARTBEAT_1: '0',
+  HEARTBEAT_2: '1',
 };
 
 export default class MovingSprite extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      left: true,
+      heartbeat: true,
     };
   }
 
@@ -21,7 +27,7 @@ export default class MovingSprite extends Component {
     this.moveInterval = setInterval(() => {
       this.setState(previousState => {
         return {
-          left: !previousState.left,
+          heartbeat: !previousState.heartbeat,
         };
       });
     }, 500);
@@ -36,13 +42,14 @@ export default class MovingSprite extends Component {
       <Image
         source={this.sprite()}
         key={this.sprite()}
-        style={{width: 16, height: 20}}
+        style={{width: 64, height: 64}}
       />
     )
   }
 
   sprite() {
     // TODO: Add running sprites
+    return this.walkingSprite();
     if (this.props.speed > 1) {
       return this.walkingSprite();
     } else {
@@ -51,29 +58,19 @@ export default class MovingSprite extends Component {
   }
 
   standingSprite() {
-    switch(this.facingQuadrant()) {
-      case Direction.EAST:
-        return this.standRight;
-      case Direction.SOUTH:
-        return this.standDown;
-      case Direction.WEST:
-        return this.standLeft;
-      default:
-        return this.standUp;
-    }
+    let spriteForBearing = this.spriteForCurrentBearing();
+    return spriteForBearing[Animation.STANDING] || spriteForBearing[Animation.HEARTBEAT_1];
   }
 
   walkingSprite() {
-    switch(this.facingQuadrant()) {
-      case Direction.EAST:
-        return this.state.left ? this.walkRightLeft : this.walkRightRight;
-      case Direction.SOUTH:
-        return this.state.left ? this.walkDownLeft : this.walkDownRight;
-      case Direction.WEST:
-        return this.state.left ? this.walkLeftLeft : this.walkLeftRight;
-      default:
-        return this.state.left ? this.walkUpLeft : this.walkUpRight;
-    }
+    let spriteForBearing = this.spriteForCurrentBearing();
+    let heartbeat = this.state.heartbeat ? Animation.HEARTBEAT_1 : Animation.HEARTBEAT_2;
+    return spriteForBearing[heartbeat];
+  }
+
+  spriteForCurrentBearing() {
+    let direction = this.facingQuadrant();
+    return this.props.sprite[direction];
   }
 
   facingQuadrant() {
@@ -91,6 +88,7 @@ export default class MovingSprite extends Component {
 }
 
 MovingSprite.props = {
+  sprite: PropTypes.object.isRequired,
   bearing: PropTypes.number.isRequired,
   speed: PropTypes.number.isRequired,
 };

@@ -3,246 +3,246 @@
 
     <item
         is-multidex="false"
-        jar="/Users/akg/alec/indigo-client/android/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/10.2.4/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.1"
-        sha1="dd1d0d84da2cff18f741c63a9c3af7d9aa89fdd6">
-        <dex dex="/Users/akg/alec/indigo-client/android/app/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-base-10.2.4_eef6b2eb7ca2ddf1a2f72dcf3cff70ed77553ec8.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/akg/alec/indigo-client/android/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-basement/10.2.4/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.1"
-        sha1="9ed08fab37c3a572da1d9ed2bf2e36c8d3e2bc48">
-        <dex dex="/Users/akg/alec/indigo-client/android/app/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-basement-10.2.4_c2732d495051f3ccee5a42165663aec4afd2c145.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/akg/.gradle/caches/modules-2/files-2.1/com.squareup.okhttp3/okhttp/3.4.1/c7c4f9e35c2fd5900da24f9872e3971801f08ce0/okhttp-3.4.1.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.1"
-        sha1="c7c4f9e35c2fd5900da24f9872e3971801f08ce0">
-        <dex dex="/Users/akg/alec/indigo-client/android/app/build/intermediates/pre-dexed/debug/okhttp-3.4.1_039e7396ba076bb30dc73af5208a5e6256b3c301.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/akg/alec/indigo-client/android/app/build/intermediates/exploded-aar/com.facebook.react/react-native/0.45.1/jars/libs/infer-annotations-4.0.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.1"
-        sha1="9809e90be788acdb479b2b44e2112f3295a03068">
-        <dex dex="/Users/akg/alec/indigo-client/android/app/build/intermediates/pre-dexed/debug/infer-annotations-4.0_39de8c4145eb806165d8f1f6db05de6d3aca6b18.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/akg/alec/indigo-client/android/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-maps/10.2.4/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.1"
-        sha1="6d0d5e86f5b7203834df01ed78ebfdd5cbf74d48">
-        <dex dex="/Users/akg/alec/indigo-client/android/app/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-maps-10.2.4_07ac96467307c814d5b7fa2b50123b29ed46e9cc.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/akg/.gradle/caches/modules-2/files-2.1/com.facebook.fbui.textlayoutbuilder/staticlayout-proxy/1.0/f162442a19fff13995fbd51ba414d9ee05579080/staticlayout-proxy-1.0.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.1"
-        sha1="f162442a19fff13995fbd51ba414d9ee05579080">
-        <dex dex="/Users/akg/alec/indigo-client/android/app/build/intermediates/pre-dexed/debug/staticlayout-proxy-1.0_d3730317d1d21780fe25468a38e3b7f918f4c6d5.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/akg/Library/Android/sdk/extras/android/m2repository/com/android/support/support-annotations/24.0.0/support-annotations-24.0.0.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.1"
-        sha1="2943c74db6d4346ab8c6531adac91fa05c137c40">
-        <dex dex="/Users/akg/alec/indigo-client/android/app/build/intermediates/pre-dexed/debug/support-annotations-24.0.0_5a1ceacd7697bb2b0e43ca8f1e64a1e90e4c00dd.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/akg/alec/indigo-client/android/app/build/intermediates/exploded-aar/com.facebook.fresco/imagepipeline-okhttp3/1.0.1/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.1"
-        sha1="ba9b39366b723ccff6359d1117332968e98a4aca">
-        <dex dex="/Users/akg/alec/indigo-client/android/app/build/intermediates/pre-dexed/debug/com.facebook.fresco-imagepipeline-okhttp3-1.0.1_0355dfe9c1038e954d9dbc6e197f819d94142383.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/akg/alec/indigo-client/android/app/build/intermediates/exploded-aar/IndigoClient/react-native-maps/unspecified/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.1"
-        sha1="cfe651e3dc0896e6e084eb8ab986e16aa0cf47c0">
-        <dex dex="/Users/akg/alec/indigo-client/android/app/build/intermediates/pre-dexed/debug/IndigoClient-react-native-maps-unspecified_6a38d02aa71a3462d11aae09d3d430bf4ed87228.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/akg/.m2/repository/javax/inject/javax.inject/1/javax.inject-1.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.1"
-        sha1="6975da39a7040257bd51d21a231b76c915872d38">
-        <dex dex="/Users/akg/alec/indigo-client/android/app/build/intermediates/pre-dexed/debug/javax.inject-1_c539f3f69a094d6f4c88c697e1db20c508a9c66c.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/akg/alec/indigo-client/android/app/build/intermediates/exploded-aar/com.facebook.fresco/imagepipeline/1.0.1/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.1"
-        sha1="d9c4402c3057225d80cbbbec52154e7a25b0ebdf">
-        <dex dex="/Users/akg/alec/indigo-client/android/app/build/intermediates/pre-dexed/debug/com.facebook.fresco-imagepipeline-1.0.1_3db8343321ee3092406cc09fd5cb8f0652deac88.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/akg/alec/indigo-client/android/app/build/intermediates/exploded-aar/com.facebook.soloader/soloader/0.1.0/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.1"
-        sha1="8f615bca00639150c9eb6175d4b5471193f70794">
-        <dex dex="/Users/akg/alec/indigo-client/android/app/build/intermediates/pre-dexed/debug/com.facebook.soloader-soloader-0.1.0_1a7608119ba7367c118972439a5b35c096fc4a36.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/akg/alec/indigo-client/android/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.1/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.1"
-        sha1="d86429b0f0b3f3cafbeb78dda1b9d89119ccb05d">
-        <dex dex="/Users/akg/alec/indigo-client/android/app/build/intermediates/pre-dexed/debug/com.android.support-appcompat-v7-23.0.1_29718afc0ad72aa879f058b43ddc96e927a66c01.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/akg/.gradle/caches/modules-2/files-2.1/com.squareup.okhttp3/okhttp-urlconnection/3.4.1/63994437f62bc861bc20c605d12962f7246116d1/okhttp-urlconnection-3.4.1.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.1"
-        sha1="63994437f62bc861bc20c605d12962f7246116d1">
-        <dex dex="/Users/akg/alec/indigo-client/android/app/build/intermediates/pre-dexed/debug/okhttp-urlconnection-3.4.1_044d7d0a6cdadc06e9fdf525650bdb1d8d6592bb.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/akg/alec/indigo-client/android/app/build/intermediates/exploded-aar/com.android.support/support-v4/24.0.0/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.1"
-        sha1="2f7e6e2dad1bccaf68a8820820adc6c0d5b96d37">
-        <dex dex="/Users/akg/alec/indigo-client/android/app/build/intermediates/pre-dexed/debug/com.android.support-support-v4-24.0.0_7345fe4316022ee36829dc205f7ff04a42018106.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/akg/alec/indigo-client/android/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-tasks/10.2.4/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.1"
-        sha1="5803db663655ef5cb38c6bcb17ba326fdb9edfbd">
-        <dex dex="/Users/akg/alec/indigo-client/android/app/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-tasks-10.2.4_cbe9a5b89eb7f609b254e11bb77cc4fc2be3f3b6.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/akg/alec/indigo-client/android/app/build/intermediates/exploded-aar/com.facebook.fresco/fresco/1.0.1/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.1"
-        sha1="cf836a435a496eb22ff2aa69aa1e619462549f81">
-        <dex dex="/Users/akg/alec/indigo-client/android/app/build/intermediates/pre-dexed/debug/com.facebook.fresco-fresco-1.0.1_6b6f62a04721c3137e831d0d2e75cd232d089f7e.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/akg/.m2/repository/com/google/code/findbugs/jsr305/3.0.0/jsr305-3.0.0.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.1"
-        sha1="5871fb60dc68d67da54a663c3fd636a10a532948">
-        <dex dex="/Users/akg/alec/indigo-client/android/app/build/intermediates/pre-dexed/debug/jsr305-3.0.0_f0bda6602b72de9b78cf7d5a6a43d51a01ed8cc2.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/akg/.gradle/caches/modules-2/files-2.1/com.squareup.okio/okio/1.9.0/f824591a0016efbaeddb8300bee54832a1398cfa/okio-1.9.0.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.1"
-        sha1="f824591a0016efbaeddb8300bee54832a1398cfa">
-        <dex dex="/Users/akg/alec/indigo-client/android/app/build/intermediates/pre-dexed/debug/okio-1.9.0_ac37267d24ae68469f2d9497c890435f081eb61a.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/akg/alec/indigo-client/android/app/build/intermediates/exploded-aar/com.facebook.fbui.textlayoutbuilder/textlayoutbuilder/1.0.0/jars/classes.jar"
+        jar="C:\Users\AKG\OneDrive\Coding\Pokemon\indigo-client\android\app\build\intermediates\exploded-aar\com.facebook.fbui.textlayoutbuilder\textlayoutbuilder\1.0.0\jars\classes.jar"
         jumboMode="false"
         optimize="true"
         revision="23.0.1"
         sha1="f90b593491e4044903f0bbf68dc3fa2790b151b9">
-        <dex dex="/Users/akg/alec/indigo-client/android/app/build/intermediates/pre-dexed/debug/com.facebook.fbui.textlayoutbuilder-textlayoutbuilder-1.0.0_574f3f8ef733742c2d991dd0ff0722630a779eef.jar" />
+        <dex dex="C:\Users\AKG\OneDrive\Coding\Pokemon\indigo-client\android\app\build\intermediates\pre-dexed\debug\com.facebook.fbui.textlayoutbuilder-textlayoutbuilder-1.0.0_15a1a8164ca5edd94caf1587cbf061917ee64e57.jar" />
     </item>
     <item
         is-multidex="false"
-        jar="/Users/akg/alec/indigo-client/android/app/build/intermediates/exploded-aar/com.facebook.fresco/drawee/1.0.1/jars/classes.jar"
+        jar="C:\Users\AKG\.m2\repository\com\google\code\findbugs\jsr305\3.0.0\jsr305-3.0.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="5871fb60dc68d67da54a663c3fd636a10a532948">
+        <dex dex="C:\Users\AKG\OneDrive\Coding\Pokemon\indigo-client\android\app\build\intermediates\pre-dexed\debug\jsr305-3.0.0_a2b766bf45afc3525edf63a390453381351aac35.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\AKG\.gradle\caches\modules-2\files-2.1\com.squareup.okhttp3\okhttp-urlconnection\3.4.1\63994437f62bc861bc20c605d12962f7246116d1\okhttp-urlconnection-3.4.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="63994437f62bc861bc20c605d12962f7246116d1">
+        <dex dex="C:\Users\AKG\OneDrive\Coding\Pokemon\indigo-client\android\app\build\intermediates\pre-dexed\debug\okhttp-urlconnection-3.4.1_986b0ede2f746c9f75f8f0bd95fc67adaf82aadf.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\AKG\.gradle\caches\modules-2\files-2.1\com.squareup.okio\okio\1.9.0\f824591a0016efbaeddb8300bee54832a1398cfa\okio-1.9.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="f824591a0016efbaeddb8300bee54832a1398cfa">
+        <dex dex="C:\Users\AKG\OneDrive\Coding\Pokemon\indigo-client\android\app\build\intermediates\pre-dexed\debug\okio-1.9.0_65cf83fccbc19e0a93af26cb21f187276dfdd467.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\AKG\OneDrive\Coding\Pokemon\indigo-client\android\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-tasks\10.2.4\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="5803db663655ef5cb38c6bcb17ba326fdb9edfbd">
+        <dex dex="C:\Users\AKG\OneDrive\Coding\Pokemon\indigo-client\android\app\build\intermediates\pre-dexed\debug\com.google.android.gms-play-services-tasks-10.2.4_2ab809862767c380a171bf4294804aa18b6aa173.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\AKG\OneDrive\Coding\Pokemon\indigo-client\android\app\build\intermediates\exploded-aar\IndigoClient\react-native-maps\unspecified\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="f89355e3f376f89dff01a67965bbf4da8cfe79f0">
+        <dex dex="C:\Users\AKG\OneDrive\Coding\Pokemon\indigo-client\android\app\build\intermediates\pre-dexed\debug\IndigoClient-react-native-maps-unspecified_58cb5b7a1095eddee5d27fa36db95a27457df3b1.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\AKG\.gradle\caches\modules-2\files-2.1\com.squareup.okhttp3\okhttp\3.4.1\c7c4f9e35c2fd5900da24f9872e3971801f08ce0\okhttp-3.4.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="c7c4f9e35c2fd5900da24f9872e3971801f08ce0">
+        <dex dex="C:\Users\AKG\OneDrive\Coding\Pokemon\indigo-client\android\app\build\intermediates\pre-dexed\debug\okhttp-3.4.1_8cd7e650a1f0e4d018fe0567314530a901fa5f88.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\AKG\OneDrive\Coding\Pokemon\indigo-client\android\app\build\intermediates\exploded-aar\com.facebook.react\react-native\0.45.1\jars\libs\infer-annotations-4.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="9809e90be788acdb479b2b44e2112f3295a03068">
+        <dex dex="C:\Users\AKG\OneDrive\Coding\Pokemon\indigo-client\android\app\build\intermediates\pre-dexed\debug\infer-annotations-4.0_0e1c802652bb329f113ba0cebc40cd703d86324a.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\AKG\OneDrive\Coding\Pokemon\indigo-client\android\app\build\intermediates\exploded-aar\com.facebook.fresco\drawee\1.0.1\jars\classes.jar"
         jumboMode="false"
         optimize="true"
         revision="23.0.1"
         sha1="5a61f17cd72e20aa4323cbf5f909b7c609619275">
-        <dex dex="/Users/akg/alec/indigo-client/android/app/build/intermediates/pre-dexed/debug/com.facebook.fresco-drawee-1.0.1_f7ab350a2b473f3aa080d8eddc2eda6e50c56057.jar" />
+        <dex dex="C:\Users\AKG\OneDrive\Coding\Pokemon\indigo-client\android\app\build\intermediates\pre-dexed\debug\com.facebook.fresco-drawee-1.0.1_ea13604314fedebdf9f9f1b8523a8f499d7eabc4.jar" />
     </item>
     <item
         is-multidex="false"
-        jar="/Users/akg/.gradle/caches/modules-2/files-2.1/com.squareup.okhttp3/okhttp-ws/3.4.1/8ace66ef7002d98f633377c9e67daeeb196d8c3b/okhttp-ws-3.4.1.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.1"
-        sha1="8ace66ef7002d98f633377c9e67daeeb196d8c3b">
-        <dex dex="/Users/akg/alec/indigo-client/android/app/build/intermediates/pre-dexed/debug/okhttp-ws-3.4.1_cba6f77bbedb80739e883d65a7cb093b1db95ef7.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/akg/alec/indigo-client/android/app/build/intermediates/exploded-aar/com.facebook.fresco/imagepipeline-base/1.0.1/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.1"
-        sha1="050f688115ea65a0292d8483a6ffe6bcdab1e2ef">
-        <dex dex="/Users/akg/alec/indigo-client/android/app/build/intermediates/pre-dexed/debug/com.facebook.fresco-imagepipeline-base-1.0.1_d1d5629af97b7723c68ee3194663858a9300d9d5.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/akg/alec/indigo-client/android/app/build/intermediates/exploded-aar/com.facebook.fresco/fbcore/1.0.1/jars/classes.jar"
+        jar="C:\Users\AKG\OneDrive\Coding\Pokemon\indigo-client\android\app\build\intermediates\exploded-aar\com.facebook.fresco\fbcore\1.0.1\jars\classes.jar"
         jumboMode="false"
         optimize="true"
         revision="23.0.1"
         sha1="2668e49e4e31c7d451b76a36009b902bf44e0d70">
-        <dex dex="/Users/akg/alec/indigo-client/android/app/build/intermediates/pre-dexed/debug/com.facebook.fresco-fbcore-1.0.1_bd01889655b34016fd01f9f5bfc77533447d0a00.jar" />
+        <dex dex="C:\Users\AKG\OneDrive\Coding\Pokemon\indigo-client\android\app\build\intermediates\pre-dexed\debug\com.facebook.fresco-fbcore-1.0.1_9a2f06f39acd7d63c5b4e408fdaee2e7aafac4d6.jar" />
     </item>
     <item
         is-multidex="false"
-        jar="/Users/akg/alec/indigo-client/android/app/build/intermediates/exploded-aar/com.android.support/support-v4/24.0.0/jars/libs/internal_impl-24.0.0.jar"
+        jar="C:\Users\AKG\OneDrive\Coding\Pokemon\indigo-client\android\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.0.1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="d86429b0f0b3f3cafbeb78dda1b9d89119ccb05d">
+        <dex dex="C:\Users\AKG\OneDrive\Coding\Pokemon\indigo-client\android\app\build\intermediates\pre-dexed\debug\com.android.support-appcompat-v7-23.0.1_8054678a9e6566e3b9d932e43e21f177640ce2c6.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\AKG\OneDrive\Coding\Pokemon\indigo-client\android\app\build\intermediates\exploded-aar\com.facebook.soloader\soloader\0.1.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="8f615bca00639150c9eb6175d4b5471193f70794">
+        <dex dex="C:\Users\AKG\OneDrive\Coding\Pokemon\indigo-client\android\app\build\intermediates\pre-dexed\debug\com.facebook.soloader-soloader-0.1.0_58af56fac31e69a7ffbc8bf85c2a7723e4b0d8e0.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\AKG\OneDrive\Coding\Pokemon\indigo-client\android\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\10.2.4\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="9ed08fab37c3a572da1d9ed2bf2e36c8d3e2bc48">
+        <dex dex="C:\Users\AKG\OneDrive\Coding\Pokemon\indigo-client\android\app\build\intermediates\pre-dexed\debug\com.google.android.gms-play-services-basement-10.2.4_5615c8b2105e5f5f20193e41dd1e0ddabbd0d21c.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\AKG\OneDrive\Coding\Pokemon\indigo-client\android\app\build\intermediates\exploded-aar\com.facebook.fresco\imagepipeline-base\1.0.1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="050f688115ea65a0292d8483a6ffe6bcdab1e2ef">
+        <dex dex="C:\Users\AKG\OneDrive\Coding\Pokemon\indigo-client\android\app\build\intermediates\pre-dexed\debug\com.facebook.fresco-imagepipeline-base-1.0.1_28f60ed5de7eaef3bc2dc3ca1eaf5f10709af5bf.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\AKG\OneDrive\Coding\Pokemon\indigo-client\android\app\build\intermediates\exploded-aar\com.android.support\support-v4\24.0.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="2f7e6e2dad1bccaf68a8820820adc6c0d5b96d37">
+        <dex dex="C:\Users\AKG\OneDrive\Coding\Pokemon\indigo-client\android\app\build\intermediates\pre-dexed\debug\com.android.support-support-v4-24.0.0_69eb11fe9ee821e84af80147236f5edc24df3598.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\AKG\OneDrive\Coding\Pokemon\indigo-client\android\app\build\intermediates\exploded-aar\com.facebook.fresco\fresco\1.0.1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="cf836a435a496eb22ff2aa69aa1e619462549f81">
+        <dex dex="C:\Users\AKG\OneDrive\Coding\Pokemon\indigo-client\android\app\build\intermediates\pre-dexed\debug\com.facebook.fresco-fresco-1.0.1_aa8d52e10277edbf64415c01e563f4f3d13f0992.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\AKG\.m2\repository\javax\inject\javax.inject\1\javax.inject-1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="6975da39a7040257bd51d21a231b76c915872d38">
+        <dex dex="C:\Users\AKG\OneDrive\Coding\Pokemon\indigo-client\android\app\build\intermediates\pre-dexed\debug\javax.inject-1_ffc23a6623d77eceba4c2a466b5d7c873dbb6dff.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\AKG\OneDrive\Coding\Pokemon\indigo-client\android\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-maps\10.2.4\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="6d0d5e86f5b7203834df01ed78ebfdd5cbf74d48">
+        <dex dex="C:\Users\AKG\OneDrive\Coding\Pokemon\indigo-client\android\app\build\intermediates\pre-dexed\debug\com.google.android.gms-play-services-maps-10.2.4_d102b688528c7931c8bd905dc7cc4f34b9f1a79b.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\AKG\OneDrive\Coding\Pokemon\indigo-client\android\app\build\intermediates\exploded-aar\com.android.support\support-v4\24.0.0\jars\libs\internal_impl-24.0.0.jar"
         jumboMode="false"
         optimize="true"
         revision="23.0.1"
         sha1="fcaf463e10e69c1923ccf1edeba3b4196d239e00">
-        <dex dex="/Users/akg/alec/indigo-client/android/app/build/intermediates/pre-dexed/debug/internal_impl-24.0.0_a314cc03dcdbfde6446ad06691b80d9adb52661a.jar" />
+        <dex dex="C:\Users\AKG\OneDrive\Coding\Pokemon\indigo-client\android\app\build\intermediates\pre-dexed\debug\internal_impl-24.0.0_5682a686a1d85a099c4f19058453089be167153e.jar" />
     </item>
     <item
         is-multidex="false"
-        jar="/Users/akg/.gradle/caches/modules-2/files-2.1/com.parse.bolts/bolts-tasks/1.4.0/d85884acf6810a3bbbecb587f239005cbc846dc4/bolts-tasks-1.4.0.jar"
+        jar="C:\Users\AKG\OneDrive\Coding\Pokemon\indigo-client\android\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-base\10.2.4\jars\classes.jar"
         jumboMode="false"
         optimize="true"
         revision="23.0.1"
-        sha1="d85884acf6810a3bbbecb587f239005cbc846dc4">
-        <dex dex="/Users/akg/alec/indigo-client/android/app/build/intermediates/pre-dexed/debug/bolts-tasks-1.4.0_b36c856981239bf49da2ef8748ddf007174c9077.jar" />
+        sha1="dd1d0d84da2cff18f741c63a9c3af7d9aa89fdd6">
+        <dex dex="C:\Users\AKG\OneDrive\Coding\Pokemon\indigo-client\android\app\build\intermediates\pre-dexed\debug\com.google.android.gms-play-services-base-10.2.4_be1f7cf7aa4fef586d352d7b4b0171d798d3975b.jar" />
     </item>
     <item
         is-multidex="false"
-        jar="/Users/akg/alec/indigo-client/android/app/build/intermediates/exploded-aar/com.facebook.react/react-native/0.45.1/jars/classes.jar"
+        jar="C:\Users\AKG\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\24.0.0\support-annotations-24.0.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="2943c74db6d4346ab8c6531adac91fa05c137c40">
+        <dex dex="C:\Users\AKG\OneDrive\Coding\Pokemon\indigo-client\android\app\build\intermediates\pre-dexed\debug\support-annotations-24.0.0_3c16a6502188c5a80b40498cf7a5e0526926e267.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\AKG\OneDrive\Coding\Pokemon\indigo-client\android\app\build\intermediates\exploded-aar\com.facebook.fresco\imagepipeline\1.0.1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="d9c4402c3057225d80cbbbec52154e7a25b0ebdf">
+        <dex dex="C:\Users\AKG\OneDrive\Coding\Pokemon\indigo-client\android\app\build\intermediates\pre-dexed\debug\com.facebook.fresco-imagepipeline-1.0.1_fd931e1ff9543c399660d0638cb65d564d3e6647.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\AKG\OneDrive\Coding\Pokemon\indigo-client\android\app\build\intermediates\exploded-aar\com.facebook.react\react-native\0.45.1\jars\classes.jar"
         jumboMode="false"
         optimize="true"
         revision="23.0.1"
         sha1="0d3e48e200296061415952a358fad487e129adaa">
-        <dex dex="/Users/akg/alec/indigo-client/android/app/build/intermediates/pre-dexed/debug/com.facebook.react-react-native-0.45.1_848ad18cdbaac7a2b3d76864a5800aa492dbf890.jar" />
+        <dex dex="C:\Users\AKG\OneDrive\Coding\Pokemon\indigo-client\android\app\build\intermediates\pre-dexed\debug\com.facebook.react-react-native-0.45.1_2620717d43ae395aa4f4e0b53df9aadde5a390c4.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\AKG\OneDrive\Coding\Pokemon\indigo-client\android\app\build\intermediates\exploded-aar\com.facebook.fresco\imagepipeline-okhttp3\1.0.1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="ba9b39366b723ccff6359d1117332968e98a4aca">
+        <dex dex="C:\Users\AKG\OneDrive\Coding\Pokemon\indigo-client\android\app\build\intermediates\pre-dexed\debug\com.facebook.fresco-imagepipeline-okhttp3-1.0.1_51c04a4556df51293bf12c5a4c268b3d14e9792c.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\AKG\.gradle\caches\modules-2\files-2.1\com.squareup.okhttp3\okhttp-ws\3.4.1\8ace66ef7002d98f633377c9e67daeeb196d8c3b\okhttp-ws-3.4.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="8ace66ef7002d98f633377c9e67daeeb196d8c3b">
+        <dex dex="C:\Users\AKG\OneDrive\Coding\Pokemon\indigo-client\android\app\build\intermediates\pre-dexed\debug\okhttp-ws-3.4.1_f168bd5549abb117c9ddebebad2f767b80fd20db.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\AKG\.gradle\caches\modules-2\files-2.1\com.parse.bolts\bolts-tasks\1.4.0\d85884acf6810a3bbbecb587f239005cbc846dc4\bolts-tasks-1.4.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="d85884acf6810a3bbbecb587f239005cbc846dc4">
+        <dex dex="C:\Users\AKG\OneDrive\Coding\Pokemon\indigo-client\android\app\build\intermediates\pre-dexed\debug\bolts-tasks-1.4.0_1df0bac623192da48a8044f5bd1ddcbecf439824.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\AKG\.gradle\caches\modules-2\files-2.1\com.facebook.fbui.textlayoutbuilder\staticlayout-proxy\1.0\f162442a19fff13995fbd51ba414d9ee05579080\staticlayout-proxy-1.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="f162442a19fff13995fbd51ba414d9ee05579080">
+        <dex dex="C:\Users\AKG\OneDrive\Coding\Pokemon\indigo-client\android\app\build\intermediates\pre-dexed\debug\staticlayout-proxy-1.0_1aece825869482a26e18a1a0096b21c68a576671.jar" />
     </item>
 
 </items>

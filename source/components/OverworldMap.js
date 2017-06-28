@@ -4,7 +4,8 @@ import {StyleSheet} from 'react-native';
 import PropTypes from 'prop-types';
 import {connect} from 'react-redux';
 import {updateWildEncounters} from "../actions/WildEncounters";
-import TrainerBoy from "./sprites/trainerBoy";
+import MovingSprite from "./sprites/movingSprite";
+import Sprites from "./sprites/sprites";
 
 class OverworldMap extends Component {
   componentDidMount() {
@@ -40,7 +41,11 @@ class OverworldMap extends Component {
       >
         {this.props.location && <MapView.Marker
           coordinate={this.props.location.coords}>
-          <TrainerBoy/>
+          <MovingSprite
+            sprite={Sprites.sprites.trainers.overworld.m}
+            bearing={this.props.location.coords.heading}
+            speed={this.props.location.coords.speed}
+          />
         </MapView.Marker>}
       </MapView>
     );
