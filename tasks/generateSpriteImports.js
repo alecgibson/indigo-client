@@ -16,14 +16,18 @@ function addDirectoryToOutput(directory) {
   let directoryName = directory.match(/\/([^/]+)$/)[1];
   if (containsSprites) {
     let sprites = {};
-    files.forEach((file) => {
-      let matches = file.match(/([nesw])(\d+)/);
-      let direction = matches[1];
-      let number = matches[2];
+    files
+      .filter((file) => {
+        return !file.startsWith('.');
+      })
+      .forEach((file) => {
+        let matches = file.match(/([nesw])(\d+)/);
+        let direction = matches[1];
+        let number = matches[2];
 
-      sprites[direction] = sprites[direction] || {};
-      sprites[direction][number] = `require('../../../${directory}/${file}')`;
-    });
+        sprites[direction] = sprites[direction] || {};
+        sprites[direction][number] = `require('../../../${directory}/${file}')`;
+      });
 
     let spriteObj = JSON.stringify(sprites);
     spriteObj = spriteObj.replace(/"require\(/g, 'require(');
@@ -31,9 +35,13 @@ function addDirectoryToOutput(directory) {
     output = output + `"${directoryName}": ${spriteObj},`;
   } else {
     output = output + `"${directoryName}": {`;
-    files.forEach((childDirectory) => {
-      addDirectoryToOutput(directory + '/' + childDirectory);
-    });
+    files
+      .filter((childDirectory) => {
+      return !childDirectory.startsWith('.');
+      })
+      .forEach((childDirectory) => {
+        addDirectoryToOutput(directory + '/' + childDirectory);
+      });
     output = output + '},';
   }
 }

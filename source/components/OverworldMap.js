@@ -6,7 +6,6 @@ import {connect} from 'react-redux';
 import {updateWildEncounters} from "../actions/WildEncounters";
 import MovingSprite from "./sprites/movingSprite";
 import Sprites from "./sprites/sprites";
-import Random from "../services/Random";
 
 class OverworldMap extends Component {
   componentDidMount() {
@@ -33,6 +32,20 @@ class OverworldMap extends Component {
           this.map = ref;
         }}
         style={styles.map}
+        showsMyLocationButton={false}
+        showsPointsOfInterest={false}
+        showsCompass={true}
+        showsScale={false}
+        showsBuildings={true}
+        showsTraffic={false}
+        showsIndoors={false}
+        zoomEnabled={false}
+        rotateEnabled={false}
+        scrollEnabled={false}
+        pitchEnabled={false}
+        toolbarEnabled={false}
+        moveOnMarkerPress={false}
+        cacheEnabled={true}
         initialRegion={{
           latitude: 0,
           longitude: 0,
@@ -55,14 +68,18 @@ class OverworldMap extends Component {
               species = species + 'm';
             }
 
+            // Get a random - but stable - bearing based on the encounter ID
+            let bearing = parseInt(encounter.id.substr(encounter.id.length-1), 16) / 16 * 359;
+
             return (
               <MapView.Marker
                 coordinate={encounter.location}
                 key={encounter.id}
+                identifier={encounter.id}
               >
                 <MovingSprite
                   sprite={Sprites.sprites.pokemon.overworld[species]}
-                  bearing={Random.integerExclusive(0, 360)}
+                  bearing={bearing}
                   walkOnTheSpot={true}
                 />
               </MapView.Marker>
@@ -80,7 +97,7 @@ class OverworldMap extends Component {
 
     this.wildEncounterPoll = setTimeout(() => {
       this.updateWildEncounters();
-    }, 10000);
+    }, 5000);
   }
 }
 
