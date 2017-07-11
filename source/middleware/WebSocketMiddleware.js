@@ -7,6 +7,7 @@ import {TOKEN_STORAGE_KEY, invalidatedSession, authenticated} from "../actions/A
 
 const WebSocketMiddleware = (function () {
   let socket = null;
+  let userId = null;
 
   // TODO: Handle errors
 
@@ -34,6 +35,7 @@ const WebSocketMiddleware = (function () {
             break;
           case 'SESSION_VALIDATED':
             AsyncStorage.setItem(TOKEN_STORAGE_KEY, message.token);
+            userId = message.userId;
             store.dispatch(authenticated());
             store.dispatch(location());
             store.dispatch(navigate('Map'));
@@ -65,6 +67,7 @@ const WebSocketMiddleware = (function () {
         close(socket);
         break;
       case SEND:
+        action.message.userId = userId;
         socket.send(JSON.stringify(action.message));
         break;
       default:
