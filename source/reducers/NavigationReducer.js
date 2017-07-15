@@ -32,6 +32,12 @@ export default function nav(state = initialNavState, action) {
         state
       );
       break;
+    case 'Battle':
+      nextState = AppNavigator.router.getStateForAction(
+        NavigationActions.navigate({ routeName: 'Battle' }),
+        state
+      );
+      break;
     default:
       nextState = AppNavigator.router.getStateForAction(action, state);
       break;

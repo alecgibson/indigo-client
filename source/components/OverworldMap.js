@@ -1,9 +1,11 @@
 import React, {Component} from 'react';
 import MapView from 'react-native-maps';
-import {StyleSheet} from 'react-native';
+import {Button, StyleSheet} from 'react-native';
 import PropTypes from 'prop-types';
 import {connect} from 'react-redux';
-import {updateWildEncounters} from "../actions/WildEncounters";
+import {startTestWildEncounterBattle, updateWildEncounters} from "../actions/WildEncounters";
+import {navigate} from "../actions/Navigate";
+import {startWildEncounterBattle} from "../actions/WildEncounters";
 import MovingSprite from "./sprites/movingSprite";
 import Sprites from "./sprites/sprites";
 
@@ -54,7 +56,10 @@ class OverworldMap extends Component {
         }}
       >
         {this.props.location && <MapView.Marker
-          coordinate={this.props.location.coords}>
+          coordinate={this.props.location.coords}
+          onPress={() => {
+            this.startTestWildEncounterBattle();
+          }}>
           <MovingSprite
             sprite={Sprites.sprites.trainers.overworld.m}
             bearing={this.props.location.coords.heading}
@@ -65,17 +70,21 @@ class OverworldMap extends Component {
           this.props.wildEncounters.map(encounter => {
             let species = ('000' + encounter.speciesId).slice(-3);
             if (species === '003' || species === '025') {
+              // TODO: Fetch actual gender
               species = species + 'm';
             }
 
             // Get a random - but stable - bearing based on the encounter ID
-            let bearing = parseInt(encounter.id.substr(encounter.id.length-1), 16) / 16 * 359;
+            let bearing = parseInt(encounter.id.substr(encounter.id.length - 1), 16) / 16 * 359;
 
             return (
               <MapView.Marker
                 coordinate={encounter.location}
                 key={encounter.id}
                 identifier={encounter.id}
+                onPress={() => {
+                  this.startWildEncounterBattle(encounter.id);
+                }}
               >
                 <MovingSprite
                   sprite={Sprites.sprites.pokemon.overworld[species]}
@@ -98,6 +107,14 @@ class OverworldMap extends Component {
     this.wildEncounterPoll = setTimeout(() => {
       this.updateWildEncounters();
     }, 5000);
+  }
+
+  startWildEncounterBattle(encounterId) {
+    this.props.startWildEncounterBattle(encounterId);
+  }
+
+  startTestWildEncounterBattle() {
+    this.props.startTestWildEncounterBattle();
   }
 }
 
@@ -123,6 +140,16 @@ function mapDispatchToProps(dispatch) {
     updateWildEncounters: (location) => {
       dispatch(updateWildEncounters(location));
     },
+
+    startWildEncounterBattle: (encounterId) => {
+      dispatch(navigate('Battle'));
+      dispatch(startWildEncounterBattle(encounterId));
+    },
+
+    startTestWildEncounterBattle: () => {
+      dispatch(navigate('Battle'));
+      dispatch(startTestWildEncounterBattle());
+    }
   };
 }
 

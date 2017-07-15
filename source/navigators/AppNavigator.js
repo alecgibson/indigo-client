@@ -7,12 +7,14 @@ import LoginScreen from './LoginScreen';
 import RegisterScreen from "./RegisterScreen";
 import MapScreen from "./MapScreen";
 import SplashScreen from "./SplashScreen";
+import BattleScreen from "./BattleScreen";
 
 export const AppNavigator = StackNavigator({
   Splash: { screen: SplashScreen },
   Login: { screen: LoginScreen },
   Register: { screen: RegisterScreen },
   Map: { screen: MapScreen },
+  Battle: { screen: BattleScreen },
 });
 
 const AppWithNavigationState = ({ dispatch, nav }) => (

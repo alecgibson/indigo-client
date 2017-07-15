@@ -10,3 +10,18 @@ export function updateWildEncounters(location) {
     },
   });
 }
+
+export function startWildEncounterBattle(encounterId) {
+  return sendMessage({
+    type: 'wildEncounter',
+    method: 'startBattle',
+    encounterId: encounterId,
+  });
+}
+
+export function startTestWildEncounterBattle() {
+  return sendMessage({
+    type: 'wildEncounter',
+    method: 'testBattle',
+  });
+}
