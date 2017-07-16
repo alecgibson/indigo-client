@@ -19,8 +19,19 @@ class BattleContainer extends Component {
           <PokeballSpinner/>
         </View>}
         {this.battle() && <View style={styles.battleWrapper}>
-          <View style={styles.battleScreen}>
-            <Text>Battle Screen</Text>
+          <View style={styles.arenaScreen}>
+            <Image
+              style={styles.arenaBackground}
+              source={require('../../../assets/images/battle/arena-grass.png')}
+            />
+            <Image
+              style={styles.arenaPlatformOpponent}
+              source={require('../../../assets/images/battle/arena-platform-grass-opponent.png')}
+            />
+            <Image
+              style={styles.arenaPlatformOwn}
+              source={require('../../../assets/images/battle/arena-platform-grass-own.png')}
+            />
           </View>
           <View style={styles.battleControls}>
             <Image
@@ -130,9 +141,31 @@ const styles = StyleSheet.create({
     alignItems: 'stretch',
     alignContent: 'stretch',
   },
-  battleScreen: {
+  arenaScreen: {
     flex: 1,
-    backgroundColor: 'red',
+  },
+  arenaBackground: {
+    position: 'absolute',
+    left: 0,
+    top: 0,
+    width: '100%',
+    height: '100%',
+  },
+  arenaPlatformOpponent: {
+    position: 'absolute',
+    resizeMode: 'contain',
+    right: '5%',
+    bottom: '30%',
+    width: '40%',
+    height: '30%',
+  },
+  arenaPlatformOwn: {
+    position: 'absolute',
+    resizeMode: 'contain',
+    left: '0%',
+    bottom: '-10%',
+    width: '60%',
+    height: '50%',
   },
   battleControls: {
     flex: 1,
