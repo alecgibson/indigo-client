@@ -21,12 +21,18 @@ function addDirectoryToOutput(directory) {
         return !file.startsWith('.');
       })
       .forEach((file) => {
-        let matches = file.match(/([nesw])(\d+)/);
-        let direction = matches[1];
-        let number = matches[2];
+        const overworldMatches = file.match(/([nesw])(\d+)/);
+        const battleMatches = file.match(/(front|back)/);
 
-        sprites[direction] = sprites[direction] || {};
-        sprites[direction][number] = `require('../../../${directory}/${file}')`;
+        if (overworldMatches) {
+          const direction = overworldMatches[1];
+          const number = overworldMatches[2];
+          sprites[direction] = sprites[direction] || {};
+          sprites[direction][number] = `require('../../../${directory}/${file}')`;
+        } else if (battleMatches) {
+          const frontOrBack = battleMatches[1];
+          sprites[frontOrBack] = `require('../../../${directory}/${file}')`;
+        }
       });
 
     let spriteObj = JSON.stringify(sprites);

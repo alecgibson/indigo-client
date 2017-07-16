@@ -5,6 +5,7 @@ import {
 } from "react-native";
 import {connect} from 'react-redux';
 import PokeballSpinner from "../PokeballSpinner";
+import Sprites from "../sprites/sprites";
 
 class BattleContainer extends Component {
   constructor(props) {
@@ -31,6 +32,14 @@ class BattleContainer extends Component {
             <Image
               style={styles.arenaPlatformOwn}
               source={require('../../../assets/images/battle/arena-platform-grass-own.png')}
+            />
+            <Image
+              style={styles.opponentPokemon}
+              source={Sprites.sprites.pokemon.battle[this.opponentSpeciesId()]['front']}
+            />
+            <Image
+              style={styles.ownPokemon}
+              source={Sprites.sprites.pokemon.battle[this.ownSpeciesId()]['back']}
             />
           </View>
           <View style={styles.battleControls}>
@@ -109,6 +118,18 @@ class BattleContainer extends Component {
       },
     };
   }
+
+  opponentSpeciesId() {
+    return this.zeroPad(this.battle().opponentPokemon.speciesId);
+  }
+
+  ownSpeciesId() {
+    return this.zeroPad(this.battle().ownPokemon.speciesId);
+  }
+
+  zeroPad(number) {
+    return ('000' + number).slice(-3);
+  }
 }
 
 BattleContainer.props = {};
@@ -166,6 +187,22 @@ const styles = StyleSheet.create({
     bottom: '-10%',
     width: '60%',
     height: '50%',
+  },
+  opponentPokemon: {
+    position: 'absolute',
+    resizeMode: 'contain',
+    right: '0%',
+    bottom: '32%',
+    width: '50%',
+    height: '40%',
+  },
+  ownPokemon: {
+    position: 'absolute',
+    resizeMode: 'contain',
+    left: '-5%',
+    bottom: '-5%',
+    width: '70%',
+    height: '60%',
   },
   battleControls: {
     flex: 1,
