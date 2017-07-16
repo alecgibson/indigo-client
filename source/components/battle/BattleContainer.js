@@ -1,22 +1,102 @@
 import React, {Component} from "react";
-import {StyleSheet, View} from "react-native";
+import {
+  Image, StyleSheet, Text, TouchableOpacity,
+  View
+} from "react-native";
 import {connect} from 'react-redux';
 import PokeballSpinner from "../PokeballSpinner";
 
 class BattleContainer extends Component {
   constructor(props) {
     super(props);
-    this.state = {}
+    this.state = {};
   }
 
   render() {
     return (
       <View style={styles.container}>
-        <View style={styles.spinnerWrapper}>
+        {!this.battle() && <View style={styles.spinnerWrapper}>
           <PokeballSpinner/>
-        </View>
+        </View>}
+        {this.battle() && <View style={styles.battleWrapper}>
+          <View style={styles.battleScreen}>
+            <Text>Battle Screen</Text>
+          </View>
+          <View style={styles.battleControls}>
+            <Image
+              style={styles.controlBackground}
+              source={require('../../../assets/images/battle/control-background.png')}
+            />
+            <TouchableOpacity
+              onPress={() => console.warn('FIGHT')}
+              style={styles.fightButtonWrapper}>
+              <Image
+                style={styles.fightButton}
+                source={require('../../../assets/images/battle/button-fight.png')}
+              />
+            </TouchableOpacity>
+            <TouchableOpacity
+              onPress={() => console.warn('BAG')}
+              style={styles.bagButtonWrapper}>
+              <Image
+                style={styles.bagButton}
+                source={require('../../../assets/images/battle/button-bag.png')}
+              />
+            </TouchableOpacity>
+            <TouchableOpacity
+              onPress={() => console.warn('RUN')}
+              style={styles.runButtonWrapper}>
+              <Image
+                style={styles.runButton}
+                source={require('../../../assets/images/battle/button-run.png')}
+              />
+            </TouchableOpacity>
+            <TouchableOpacity
+              onPress={() => console.warn('POKEMON')}
+              style={styles.pokemonButtonWrapper}>
+              <Image
+                style={styles.pokemonButton}
+                source={require('../../../assets/images/battle/button-pokemon.png')}
+              />
+            </TouchableOpacity>
+          </View>
+        </View>}
       </View>
     );
+  }
+
+  // TODO: Fetch from state/props
+  battle() {
+    return {
+      ownPokemon: {
+        name: 'Bulbasaur',
+        speciesId: 1,
+        gender: 2,
+        level: 5,
+        stats: {
+          hitPoints: 11,
+        },
+        moves: [
+          {
+            id: 33,
+            name: 'Tackle',
+            currentPowerPoints: 35,
+            maxPowerPoints: 35,
+          }
+        ],
+        currentValues: {
+          hitPoints: 11,
+          pp: [35],
+        },
+      },
+      opponentPokemon: {
+        name: 'Pidgey',
+        speciesId: 16,
+        level: 3,
+        gender: 1,
+        hitPointFraction: 1,
+      },
+    };
   }
 }
 
@@ -27,7 +107,7 @@ function mapStateToProps(state) {
 }
 
 function mapDispatchToProps(dispatch) {
-  return {}
+  return {};
 }
 
 const styles = StyleSheet.create({
@@ -36,12 +116,84 @@ const styles = StyleSheet.create({
     flexDirection: 'column',
     justifyContent: 'center',
     alignItems: 'stretch',
+    alignContent: 'stretch',
   },
   spinnerWrapper: {
     height: 150,
     justifyContent: 'center',
     alignItems: 'center',
-  }
+  },
+  battleWrapper: {
+    flex: 1,
+    flexDirection: 'column',
+    justifyContent: 'center',
+    alignItems: 'stretch',
+    alignContent: 'stretch',
+  },
+  battleScreen: {
+    flex: 1,
+    backgroundColor: 'red',
+  },
+  battleControls: {
+    flex: 1,
+    backgroundColor: 'black',
+  },
+  controlBackground: {
+    position: 'absolute',
+    width: '160%',
+    height: '100%',
+    top: 0,
+    left: '-30%',
+    right: '-30%',
+    zIndex: -1,
+  },
+  fightButtonWrapper: {
+    alignItems: 'center',
+    position: 'absolute',
+    height: '10%',
+    width: '50%',
+    top: '45%',
+    left: '25%',
+    flexDirection: 'column',
+    justifyContent: 'center',
+  },
+  fightButton: {
+    width: '50%',
+    height: '70%',
+  },
+  bagButtonWrapper: {
+    position: 'absolute',
+    bottom: 0,
+    left: 0,
+    width: '30%',
+    height: '28.5%',
+  },
+  bagButton: {
+    width: '100%',
+    height: '100%',
+  },
+  runButtonWrapper: {
+    position: 'absolute',
+    bottom: 0,
+    left: '35.25%',
+    width: '29.5%',
+    height: '21%',
+  },
+  runButton: {
+    width: '100%',
+    height: '100%',
+  },
+  pokemonButtonWrapper: {
+    position: 'absolute',
+    bottom: 0,
+    right: 0,
+    width: '30%',
+    height: '28.5%',
+  },
+  pokemonButton: {
+    width: '100%',
+    height: '100%',
+  },
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(BattleContainer);
