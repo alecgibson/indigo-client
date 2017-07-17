@@ -18,7 +18,7 @@ class OverworldMap extends Component {
     clearTimeout(this.wildEncounterPoll);
   }
 
-  componentDidUpdate(previousProps) {
+  componentDidUpdate() {
     this.map.animateToRegion({
       latitude: this.props.location.coords.latitude,
       longitude: this.props.location.coords.longitude,
