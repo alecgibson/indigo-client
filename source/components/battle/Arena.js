@@ -54,6 +54,24 @@ export default class Arena extends Component {
             style={styles.statBar}
             source={require('../../../assets/images/battle/stat-bar-own.png')}
           />
+          <View style={[styles.healthBar, styles.ownHealthBar]}>
+            <Image
+              style={{
+                height: '100%',
+                width: this.asPercentage(
+                  this.props.battle.ownPokemon.currentValues.hitPoints,
+                  this.props.battle.ownPokemon.stats.hitPoints,
+                ),
+              }}
+              source={this.healthBar(this.props.battle.opponentPokemon.hitPointFraction)}
+            />
+          </View>
+          <Text style={[styles.statText, styles.ownPokemonName]}>
+            {this.props.battle.ownPokemon.name}
+          </Text>
+          <Text style={[styles.statText, styles.ownPokemonLevel]}>
+            {this.props.battle.ownPokemon.level}
+          </Text>
         </View>
       </View>
     );
@@ -71,8 +89,8 @@ export default class Arena extends Component {
     return ('000' + number).slice(-3);
   }
 
-  asPercentage(decimal) {
-    return decimal * 100 + '%';
+  asPercentage(decimal, denominator = 1) {
+    return decimal / denominator * 100 + '%';
   }
 
   healthBar(hitPointFraction) {
@@ -169,6 +187,20 @@ const styles = StyleSheet.create({
     bottom: '10%',
     width: '40%',
     height: '40%',
+  },
+  ownPokemonName: {
+    position: 'absolute',
+    right: '90%',
+    bottom: '43%',
+  },
+  ownPokemonLevel: {
+    position: 'absolute',
+    right: '25%',
+    bottom: '43%',
+  },
+  ownHealthBar: {
+    right: '10%',
+    bottom: '35%',
   },
   statBar: {
     resizeMode: 'contain',
