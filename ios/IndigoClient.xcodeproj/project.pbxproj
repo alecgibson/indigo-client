@@ -36,6 +36,7 @@
 		5E9157361DD0AC6A00FF2AA8 /* libRCTAnimation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E9157331DD0AC6500FF2AA8 /* libRCTAnimation.a */; };
 		832341BD1AAA6AB300B99B32 /* libRCTText.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 832341B51AAA6A8300B99B32 /* libRCTText.a */; };
 		778D5B47FC4F489F9B62341C /* libAirMaps.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 95D899CE2DEF498BBE9AC764 /* libAirMaps.a */; };
+		1445D3D24E324EACB5A41F52 /* Thintel.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CAFC6A7069EB4B54BD837759 /* Thintel.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -257,6 +258,7 @@
 		832341B01AAA6A8300B99B32 /* RCTText.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTText.xcodeproj; path = "../node_modules/react-native/Libraries/Text/RCTText.xcodeproj"; sourceTree = "<group>"; };
 		AE9D73D281044830ABE6A137 /* AirMaps.xcodeproj */ = {isa = PBXFileReference; name = "AirMaps.xcodeproj"; path = "../node_modules/react-native-maps/lib/ios/AirMaps.xcodeproj"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = wrapper.pb-project; explicitFileType = undefined; includeInIndex = 0; };
 		95D899CE2DEF498BBE9AC764 /* libAirMaps.a */ = {isa = PBXFileReference; name = "libAirMaps.a"; path = "libAirMaps.a"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = archive.ar; explicitFileType = undefined; includeInIndex = 0; };
+		CAFC6A7069EB4B54BD837759 /* Thintel.ttf */ = {isa = PBXFileReference; name = "Thintel.ttf"; path = "../assets/fonts/Thintel.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -471,6 +473,7 @@
 				832341AE1AAA6A7D00B99B32 /* Libraries */,
 				00E356EF1AD99517003FC87E /* IndigoClientTests */,
 				83CBBA001A601CBA00E9B192 /* Products */,
+				D8A7784509D041288AC3BBB6 /* Resources */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -486,6 +489,15 @@
 			);
 			name = Products;
 			sourceTree = "<group>";
+		};
+		D8A7784509D041288AC3BBB6 /* Resources */ = {
+			isa = "PBXGroup";
+			children = (
+				CAFC6A7069EB4B54BD837759 /* Thintel.ttf */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+			path = "";
 		};
 /* End PBXGroup section */
 
@@ -845,6 +857,7 @@
 			files = (
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
 				13B07FBD1A68108700A75B9A /* LaunchScreen.xib in Resources */,
+				1445D3D24E324EACB5A41F52 /* Thintel.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
