@@ -1,14 +1,18 @@
 [
     {
-        "merged": "/Users/akg/alec/indigo-client/android/C:\\Users\\akg\\alec\\indigo-client\\android\\app\\build\\intermediates\\res\\merged\\debug\\color-v23\\abc_color_highlight_material.xml",
-        "source": "/Users/akg/alec/indigo-client/android/C:\\Users\\akg\\alec\\indigo-client\\android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.0.1\\res\\color-v23\\abc_color_highlight_material.xml"
+        "merged": "C:\\Users\\akg\\alec\\indigo-client\\android\\C:\\Users\\AKG\\OneDrive\\Coding\\Pokemon\\indigo-client\\android\\app\\build\\intermediates\\res\\merged\\debug\\color-v23\\abc_color_highlight_material.xml",
+        "source": "C:\\Users\\akg\\alec\\indigo-client\\android\\C:\\Users\\AKG\\OneDrive\\Coding\\Pokemon\\indigo-client\\android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.0.1\\res\\color-v23\\abc_color_highlight_material.xml"
     },
     {
-        "merged": "/Users/akg/alec/indigo-client/android/C:\\Users\\AKG\\OneDrive\\Coding\\Pokemon\\indigo-client\\android\\app\\build\\intermediates\\res\\merged\\debug\\color-v23\\abc_color_highlight_material.xml",
-        "source": "/Users/akg/alec/indigo-client/android/C:\\Users\\AKG\\OneDrive\\Coding\\Pokemon\\indigo-client\\android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.0.1\\res\\color-v23\\abc_color_highlight_material.xml"
+        "merged": "C:\\Users\\akg\\alec\\indigo-client\\android\\C:\\Users\\akg\\alec\\indigo-client\\android\\app\\build\\intermediates\\res\\merged\\debug\\color-v23\\abc_color_highlight_material.xml",
+        "source": "C:\\Users\\akg\\alec\\indigo-client\\android\\C:\\Users\\akg\\alec\\indigo-client\\android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.0.1\\res\\color-v23\\abc_color_highlight_material.xml"
     },
     {
-        "merged": "/Users/akg/alec/indigo-client/android/app/build/intermediates/res/merged/debug/color-v23/abc_color_highlight_material.xml",
-        "source": "/Users/akg/alec/indigo-client/android/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.1/res/color-v23/abc_color_highlight_material.xml"
+        "merged": "C:\\Users\\akg\\alec\\indigo-client\\android\\app\\build\\intermediates\\res\\merged\\debug\\color-v23\\abc_color_highlight_material.xml",
+        "source": "C:\\Users\\akg\\alec\\indigo-client\\android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.0.1\\res\\color-v23\\abc_color_highlight_material.xml"
+    },
+    {
+        "merged": "C:\\Users\\AKG\\OneDrive\\Coding\\Pokemon\\indigo-client\\android\\app\\build\\intermediates\\res\\merged\\debug\\color-v23\\abc_color_highlight_material.xml",
+        "source": "C:\\Users\\AKG\\OneDrive\\Coding\\Pokemon\\indigo-client\\android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.0.1\\res\\color-v23\\abc_color_highlight_material.xml"
     }
 ]

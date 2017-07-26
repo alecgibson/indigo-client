@@ -1,4 +1,4 @@
-#Mon Jul 17 07:44:04 BST 2017
-base.0=/Users/akg/alec/indigo-client/android/app/build/intermediates/transforms/dex/debug/folders/1000/1f/main
+#Wed Jul 26 06:45:28 BST 2017
+base.0=C\:\\Users\\AKG\\OneDrive\\Coding\\Pokemon\\indigo-client\\android\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\1f\\main
 renamed.0=classes.dex
-file.0=/Users/akg/alec/indigo-client/android/app/build/intermediates/transforms/dex/debug/folders/1000/1f/main/classes.dex
+file.0=C\:\\Users\\AKG\\OneDrive\\Coding\\Pokemon\\indigo-client\\android\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\1f\\main\\classes.dex

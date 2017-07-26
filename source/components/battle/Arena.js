@@ -31,7 +31,7 @@ export default class Arena extends Component {
           style={styles.ownPokemon}
           source={Sprites.sprites.pokemon.battle[this.ownSpeciesId()]['back']}
         />
-        <View style={styles.opponentStatBarContainer}>
+        <View style={[styles.statBarContainer, styles.opponentStatBarContainer]}>
           <Image
             style={styles.statBar}
             source={require('../../../assets/images/battle/stat-bar-opponent.png')}
@@ -49,7 +49,7 @@ export default class Arena extends Component {
             {this.props.battle.opponentPokemon.level}
           </Text>
         </View>
-        <View style={styles.ownStatBarContainer}>
+        <View style={[styles.statBarContainer, styles.ownStatBarContainer]}>
           <Image
             style={styles.statBar}
             source={require('../../../assets/images/battle/stat-bar-own.png')}
@@ -147,20 +147,23 @@ const styles = StyleSheet.create({
     width: '70%',
     height: '60%',
   },
+  statBarContainer: {
+    position: 'absolute',
+    width: '40%',
+    height: '40%',
+  },
   opponentStatBarContainer: {
     position: 'absolute',
     left: '0%',
     top: '10%',
-    width: '40%',
-    height: '30%',
   },
   healthBar: {
     position: 'absolute',
-    height: '2.75%',
+    height: '2.5%',
     width: '39.5%',
   },
   opponentHealthBar: {
-    bottom: '27.5%',
+    top: '55%',
     left: '35%',
   },
   statText: {
@@ -173,34 +176,32 @@ const styles = StyleSheet.create({
   },
   opponentPokemonName: {
     position: 'absolute',
-    bottom: '29%',
+    top: '42.5%',
     left: '5%',
   },
   opponentPokemonLevel: {
     position: 'absolute',
-    bottom: '29%',
+    top: '42.5%',
     left: '75%',
   },
   ownStatBarContainer: {
     position: 'absolute',
     right: '0%',
     bottom: '10%',
-    width: '40%',
-    height: '40%',
   },
   ownPokemonName: {
     position: 'absolute',
-    right: '90%',
+    left: '12%',
     bottom: '43%',
   },
   ownPokemonLevel: {
     position: 'absolute',
-    right: '25%',
+    left: '76%',
     bottom: '43%',
   },
   ownHealthBar: {
-    right: '10%',
-    bottom: '35%',
+    left: '48%',
+    bottom: '41%',
   },
   statBar: {
     resizeMode: 'contain',
