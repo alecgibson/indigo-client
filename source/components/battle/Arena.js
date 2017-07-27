@@ -2,6 +2,8 @@ import React, {Component} from "react";
 import {Image, StyleSheet, Text, View} from "react-native";
 import Sprites from "../sprites/sprites";
 import PropTypes from "prop-types";
+import OpponentStatBar from "./OpponentStatBar";
+import OwnStatBar from "./OwnStatBar";
 
 export default class Arena extends Component {
   static propTypes = {
@@ -31,48 +33,8 @@ export default class Arena extends Component {
           style={styles.ownPokemon}
           source={Sprites.sprites.pokemon.battle[this.ownSpeciesId()]['back']}
         />
-        <View style={[styles.statBarContainer, styles.opponentStatBarContainer]}>
-          <Image
-            style={styles.statBar}
-            source={require('../../../assets/images/battle/stat-bar-opponent.png')}
-          />
-          <View style={[styles.healthBar, styles.opponentHealthBar]}>
-            <Image
-              style={{height: '100%', width: this.asPercentage(this.props.battle.opponentPokemon.hitPointFraction)}}
-              source={this.healthBar(this.props.battle.opponentPokemon.hitPointFraction)}
-            />
-          </View>
-          <Text style={[styles.statText, styles.opponentPokemonName]}>
-            {this.props.battle.opponentPokemon.name}
-          </Text>
-          <Text style={[styles.statText, styles.opponentPokemonLevel]}>
-            {this.props.battle.opponentPokemon.level}
-          </Text>
-        </View>
-        <View style={[styles.statBarContainer, styles.ownStatBarContainer]}>
-          <Image
-            style={styles.statBar}
-            source={require('../../../assets/images/battle/stat-bar-own.png')}
-          />
-          <View style={[styles.healthBar, styles.ownHealthBar]}>
-            <Image
-              style={{
-                height: '100%',
-                width: this.asPercentage(
-                  this.props.battle.ownPokemon.currentValues.hitPoints,
-                  this.props.battle.ownPokemon.stats.hitPoints,
-                ),
-              }}
-              source={this.healthBar(this.props.battle.opponentPokemon.hitPointFraction)}
-            />
-          </View>
-          <Text style={[styles.statText, styles.ownPokemonName]}>
-            {this.props.battle.ownPokemon.name}
-          </Text>
-          <Text style={[styles.statText, styles.ownPokemonLevel]}>
-            {this.props.battle.ownPokemon.level}
-          </Text>
-        </View>
+        <OpponentStatBar pokemon={this.props.battle.opponentPokemon} />
+        <OwnStatBar pokemon={this.props.battle.ownPokemon} />
       </View>
     );
   }
@@ -146,66 +108,5 @@ const styles = StyleSheet.create({
     bottom: '-5%',
     width: '70%',
     height: '60%',
-  },
-  statBarContainer: {
-    position: 'absolute',
-    width: '40%',
-    height: '40%',
-  },
-  opponentStatBarContainer: {
-    position: 'absolute',
-    left: '0%',
-    top: '10%',
-  },
-  healthBar: {
-    position: 'absolute',
-    height: '2.5%',
-    width: '39.5%',
-  },
-  opponentHealthBar: {
-    top: '55%',
-    left: '35%',
-  },
-  statText: {
-    fontFamily: 'Thintel',
-    fontSize: 24,
-    color: 'white',
-    textShadowColor: 'black',
-    textShadowOffset: {width: 1, height: 0},
-    textShadowRadius: 3,
-  },
-  opponentPokemonName: {
-    position: 'absolute',
-    top: '42.5%',
-    left: '5%',
-  },
-  opponentPokemonLevel: {
-    position: 'absolute',
-    top: '42.5%',
-    left: '75%',
-  },
-  ownStatBarContainer: {
-    position: 'absolute',
-    right: '0%',
-    bottom: '10%',
-  },
-  ownPokemonName: {
-    position: 'absolute',
-    left: '12%',
-    bottom: '43%',
-  },
-  ownPokemonLevel: {
-    position: 'absolute',
-    left: '76%',
-    bottom: '43%',
-  },
-  ownHealthBar: {
-    left: '48%',
-    bottom: '41%',
-  },
-  statBar: {
-    resizeMode: 'contain',
-    width: '100%',
-    height: '100%',
   },
 });
