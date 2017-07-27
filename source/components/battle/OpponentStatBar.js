@@ -36,10 +36,10 @@ export default class OpponentStatBar extends StatBar {
 const styles = StyleSheet.create({
   statBarContainer: {
     position: 'absolute',
-    width: '40%',
-    height: '40%',
+    width: '50%',
+    height: '50%',
     left: '0%',
-    top: '10%',
+    top: '0%',
   },
   healthBar: {
     position: 'absolute',
@@ -50,7 +50,7 @@ const styles = StyleSheet.create({
   },
   statText: {
     fontFamily: 'Thintel',
-    fontSize: 20,
+    fontSize: 28,
     color: 'white',
     textShadowColor: 'black',
     textShadowOffset: { width: 1, height: 0 },

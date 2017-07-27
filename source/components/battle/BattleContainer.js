@@ -45,7 +45,7 @@ class BattleContainer extends Component {
           }
         ],
         currentValues: {
-          hitPoints: 5,
+          hitPoints: 11,
           pp: [35],
         },
       },

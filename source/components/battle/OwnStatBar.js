@@ -30,10 +30,10 @@ export default class OwnStatBar extends StatBar {
         <Text style={[styles.statText, styles.level]}>
           {this.props.pokemon.level}
         </Text>
-        <Text style={[styles.currentHitPoints, styles.statText]}>
+        <Text style={[styles.statText, styles.currentHitPoints]}>
           {this.props.pokemon.currentValues.hitPoints}
         </Text>
-        <Text style={[styles.totalHitPoints, styles.statText]}>
+        <Text style={[styles.statText, styles.totalHitPoints]}>
           {this.props.pokemon.stats.hitPoints}
         </Text>
       </View>
@@ -44,8 +44,8 @@ export default class OwnStatBar extends StatBar {
 const styles = StyleSheet.create({
   statBarContainer: {
     position: 'absolute',
-    width: '40%',
-    height: '40%',
+    width: '50%',
+    height: '50%',
     right: '0%',
     bottom: '10%',
   },
@@ -58,7 +58,7 @@ const styles = StyleSheet.create({
   },
   statText: {
     fontFamily: 'Thintel',
-    fontSize: 20,
+    fontSize: 28,
     color: 'white',
     textShadowColor: 'black',
     textShadowOffset: {width: 1, height: 0},
@@ -80,11 +80,13 @@ const styles = StyleSheet.create({
     height: '100%',
   },
   currentHitPoints: {
+    fontSize: 26,
     position: 'absolute',
     bottom: '31.5%',
     right: '34%',
   },
   totalHitPoints: {
+    fontSize: 26,
     position: 'absolute',
     left: '76%',
     bottom: '31.5%',
