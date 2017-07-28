@@ -1,15 +1,12 @@
-import React, {Component} from "react";
-import {Image, StyleSheet, Text, View} from "react-native";
+import React, { Component } from "react";
+import { Image, StyleSheet, View } from "react-native";
 import Sprites from "../sprites/sprites";
 import PropTypes from "prop-types";
 import OpponentStatBar from "./OpponentStatBar";
 import OwnStatBar from "./OwnStatBar";
+import TextBox from "./TextBox";
 
 export default class Arena extends Component {
-  static propTypes = {
-    battle: PropTypes.object.isRequired,
-  };
-
   render() {
     return (
       <View style={styles.container}>
@@ -65,6 +62,10 @@ export default class Arena extends Component {
     }
   }
 }
+
+Arena.propTypes = {
+  battle: PropTypes.object.isRequired,
+};
 
 const styles = StyleSheet.create({
   container: {

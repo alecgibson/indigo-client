@@ -5,10 +5,6 @@ import PropTypes from "prop-types";
 import StatBar from "./StatBar";
 
 export default class OpponentStatBar extends StatBar {
-  static propTypes = {
-    pokemon: PropTypes.object.isRequired,
-  };
-
   render() {
     return (
       <View style={styles.statBarContainer}>
@@ -32,6 +28,10 @@ export default class OpponentStatBar extends StatBar {
     );
   }
 }
+
+OpponentStatBar.propTypes = {
+  pokemon: PropTypes.object.isRequired,
+};
 
 const styles = StyleSheet.create({
   statBarContainer: {
