@@ -5,14 +5,6 @@ import {restoreAuthenticationSession} from "../actions/Authentication";
 import PropTypes from "prop-types";
 
 export default class SplashScreen extends Component {
-  static navigationOptions = {
-    header: null,
-  };
-
-  static propTypes = {
-    navigation: PropTypes.object.isRequired,
-  };
-
   componentDidMount() {
     this.props.navigation.dispatch(restoreAuthenticationSession());
   }
@@ -25,6 +17,14 @@ export default class SplashScreen extends Component {
     );
   }
 }
+
+SplashScreen.navigationOptions = {
+  header: null,
+};
+
+SplashScreen.propTypes = {
+  navigation: PropTypes.object.isRequired,
+};
 
 const styles = StyleSheet.create({
   container: {

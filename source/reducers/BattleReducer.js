@@ -7,12 +7,20 @@ export default function battle(state = initialState, action) {
     return state;
   }
 
-  return action.message.state;
+  const newState = Object.assign({}, state);
+  newState.events = newState.events || [];
+  newState.events.push(action.message.state);
+
+  if (!newState.currentEvent) {
+    newState.currentEvent = newState.events.shift();
+  }
+
+  return newState;
 }
 
 function isBattleMessage(action) {
   return action.type === WebSocket.TYPE
     && action.method === WebSocket.RECEIVE
     && action.message
-    && action.message.type === 'battleState';
+    && action.message.type === "battleEvent";
 }

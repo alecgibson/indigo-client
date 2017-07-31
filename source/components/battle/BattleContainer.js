@@ -14,54 +14,22 @@ class BattleContainer extends Component {
   render() {
     return (
       <View style={styles.container}>
-        {!this.battle() && <View style={styles.spinnerWrapper}>
+        {!this.props.battle && <View style={styles.spinnerWrapper}>
           <PokeballSpinner/>
         </View>}
-        {this.battle() && <View style={styles.battleWrapper}>
-          <Arena battle={this.battle()} />
-          <BattleControls battle={this.battle()} />
+        {this.props.battle && <View style={styles.battleWrapper}>
+          <Arena battle={this.props.battle} message={this.props.message} />
+          <BattleControls battle={this.props.battle} />
         </View>}
       </View>
     );
   }
-
-  // TODO: Fetch from state/props
-  battle() {
-    return {
-      ownPokemon: {
-        name: 'Bulbasaur',
-        speciesId: 1,
-        gender: 2,
-        level: 5,
-        stats: {
-          hitPoints: 11,
-        },
-        moves: [
-          {
-            id: 33,
-            name: 'Tackle',
-            currentPowerPoints: 35,
-            maxPowerPoints: 35,
-          }
-        ],
-        currentValues: {
-          hitPoints: 11,
-          pp: [35],
-        },
-      },
-      opponentPokemon: {
-        name: 'Pidgey',
-        speciesId: 16,
-        level: 3,
-        gender: 1,
-        hitPointFraction: 1,
-      },
-    };
-  }
 }
 
 function mapStateToProps(state) {
-  return {};
+  return {
+    battle: state.battle,
+  };
 }
 
 function mapDispatchToProps(dispatch) {

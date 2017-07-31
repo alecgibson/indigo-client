@@ -7,35 +7,6 @@ import OwnStatBar from "./OwnStatBar";
 import TextBox from "./TextBox";
 
 export default class Arena extends Component {
-  render() {
-    return (
-      <View style={styles.container}>
-        <Image
-          style={styles.arenaBackground}
-          source={require('../../../assets/images/battle/arena-grass.png')}
-        />
-        <Image
-          style={styles.arenaPlatformOpponent}
-          source={require('../../../assets/images/battle/arena-platform-grass-opponent.png')}
-        />
-        <Image
-          style={styles.arenaPlatformOwn}
-          source={require('../../../assets/images/battle/arena-platform-grass-own.png')}
-        />
-        <Image
-          style={styles.opponentPokemon}
-          source={Sprites.sprites.pokemon.battle[this.opponentSpeciesId()]['front']}
-        />
-        <Image
-          style={styles.ownPokemon}
-          source={Sprites.sprites.pokemon.battle[this.ownSpeciesId()]['back']}
-        />
-        <OpponentStatBar pokemon={this.props.battle.opponentPokemon} />
-        <OwnStatBar pokemon={this.props.battle.ownPokemon} />
-      </View>
-    );
-  }
-
   opponentSpeciesId() {
     return this.zeroPad(this.props.battle.opponentPokemon.speciesId);
   }
@@ -61,10 +32,41 @@ export default class Arena extends Component {
       return require('../../../assets/images/battle/health-bar-red.png');
     }
   }
+
+  render() {
+    return (
+      <View style={styles.container}>
+        <Image
+          style={styles.arenaBackground}
+          source={require('../../../assets/images/battle/arena-grass.png')}
+        />
+        <Image
+          style={styles.arenaPlatformOpponent}
+          source={require('../../../assets/images/battle/arena-platform-grass-opponent.png')}
+        />
+        <Image
+          style={styles.arenaPlatformOwn}
+          source={require('../../../assets/images/battle/arena-platform-grass-own.png')}
+        />
+        <Image
+          style={styles.opponentPokemon}
+          source={Sprites.sprites.pokemon.battle[this.opponentSpeciesId()]['front']}
+        />
+        <Image
+          style={styles.ownPokemon}
+          source={Sprites.sprites.pokemon.battle[this.ownSpeciesId()]['back']}
+        />
+        <OpponentStatBar pokemon={this.props.battle.opponentPokemon} />
+        <OwnStatBar pokemon={this.props.battle.ownPokemon} />
+        {this.props.message && <TextBox text={this.props.message} />}
+      </View>
+    );
+  }
 }
 
 Arena.propTypes = {
   battle: PropTypes.object.isRequired,
+  message: PropTypes.string,
 };
 
 const styles = StyleSheet.create({
