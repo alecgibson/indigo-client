@@ -26,12 +26,10 @@ const WebSocketMiddleware = (function () {
 
   function onMessage(store) {
     return (event) => {
-      console.error(event);
       let message = JSON.parse(event.data);
       if (message.type === 'authentication') {
         switch (message.message) {
         case 'SESSION_INVALIDATED':
-          console.error("SESSION INVALIDATED");
           store.dispatch(invalidatedSession());
           store.dispatch(navigate('Login'));
           break;
